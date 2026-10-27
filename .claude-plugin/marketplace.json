@@ -12,7 +12,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": "plugins/aw",
-        "ref": "v0.0.8"
+        "ref": "v0.0.9"
       },
       "description": "Agentic workflow skills for one change from request to merge: specify the design, craft the plan, implement it, verify with evidence, request and resolve an independent code review, finalize the branch, and record session learnings.",
       "category": "development",
@@ -34,7 +34,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/skills.git",
         "path": "plugins/skills",
-        "ref": "v1.58.15"
+        "ref": "v1.58.16"
       },
       "description": "Sentimony agent skills: scope triage, planning, plan execution, test-driven development, debugging, code review, verification, and branch finishing; prose editing, dashes, and negative parallelism; skill crafting; Apache ECharts; frontend design, Vitest, TypeScript, agent context maintenance, secret hygiene, browser debugging, GitHub account switching, and committing the working tree.",
       "category": "development",
