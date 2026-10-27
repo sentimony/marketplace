@@ -1,0 +1,128 @@
+{
+  "name": "sentimony",
+  "owner": {
+    "name": "Ihor Orlovskyi",
+    "url": "https://github.com/sentimony"
+  },
+  "description": "Sentimony agent skills as installable Claude Code and Codex plugins: aw from sentimony/agentic-workflow and five plugins from sentimony/skills.",
+  "plugins": [
+    {
+      "name": "aw",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/agentic-workflow.git",
+        "path": "plugins/aw",
+        "ref": "v0.0.8"
+      },
+      "description": "Agentic workflow skills for one change from request to merge: specify the design, craft the plan, implement it, verify with evidence, request and resolve an independent code review, finalize the branch, and record session learnings.",
+      "category": "development",
+      "keywords": [
+        "agentic-workflow",
+        "spec",
+        "plan",
+        "implement",
+        "verify",
+        "code-review",
+        "finalize",
+        "engineering",
+        "best-practices"
+      ]
+    },
+    {
+      "name": "devflow",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/skills.git",
+        "path": "plugins/devflow",
+        "ref": "v1.58.14"
+      },
+      "description": "Development workflow skills: scope triage, planning, plan execution inline or through subagents, test-driven development, root-cause debugging, code review, verification, and branch finishing.",
+      "category": "development",
+      "keywords": [
+        "development",
+        "engineering",
+        "workflows",
+        "planning",
+        "code-review",
+        "debugging",
+        "tdd",
+        "git",
+        "best-practices"
+      ]
+    },
+    {
+      "name": "writing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/skills.git",
+        "path": "plugins/writing",
+        "ref": "v1.58.14"
+      },
+      "description": "Writing skills: edit prose for its reader, purpose, and author's voice, replace typographic dashes with the plain hyphen, and ban negative parallelism.",
+      "category": "development",
+      "keywords": [
+        "writing",
+        "prose",
+        "editing",
+        "style",
+        "documentation"
+      ]
+    },
+    {
+      "name": "skill-crafting",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/skills.git",
+        "path": "plugins/skill-crafting",
+        "ref": "v1.58.14"
+      },
+      "description": "Create, improve, evaluate, and optimize agent skills with measured trigger boundaries and package-owned evals.",
+      "category": "development",
+      "keywords": [
+        "skills",
+        "agent-skills",
+        "evals",
+        "prompt-engineering"
+      ]
+    },
+    {
+      "name": "echarts",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/skills.git",
+        "path": "plugins/echarts",
+        "ref": "v1.58.14"
+      },
+      "description": "Build, audit, style, debug, and optimize Apache ECharts visualizations in vanilla JS, React, or Vue.",
+      "category": "development",
+      "keywords": [
+        "echarts",
+        "charts",
+        "data-visualization",
+        "frontend"
+      ]
+    },
+    {
+      "name": "skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sentimony/skills.git",
+        "path": "plugins/skills",
+        "ref": "v1.58.14"
+      },
+      "description": "General agent skills: frontend design, Vitest, TypeScript, agent context maintenance, secret hygiene, browser debugging, GitHub account switching, and committing the working tree.",
+      "category": "development",
+      "keywords": [
+        "development",
+        "frontend",
+        "typescript",
+        "vitest",
+        "testing",
+        "debugging",
+        "agent-context",
+        "security",
+        "git"
+      ]
+    }
+  ]
+}
