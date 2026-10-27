@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+
+      - name: Validate marketplaces
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, subprocess, sys
+
+          CLAUDE = pathlib.Path(".claude-plugin/marketplace.json")
+          CODEX = pathlib.Path(".agents/plugins/marketplace.json")
+          SOURCE_KEYS = {"source", "url", "path", "ref"}
+          errors = []
+
+          def load(path):
+              try:
+                  return json.loads(path.read_text(encoding="utf-8"))
+              except (OSError, ValueError) as exc:
+                  errors.append(f"{path}: {exc}")
+                  return None
+
+          claude, codex = load(CLAUDE), load(CODEX)
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+
+          for path, data in ((CLAUDE, claude), (CODEX, codex)):
+              if data.get("name") != "sentimony":
+                  errors.append(f"{path}: name must be 'sentimony'")
+              plugins = data.get("plugins")
+              if not isinstance(plugins, list) or not plugins:
+                  errors.append(f"{path}: plugins must be a non-empty list")
+                  continue
+              names = [p.get("name") for p in plugins]
+              if len(names) != len(set(names)):
+                  errors.append(f"{path}: duplicate plugin names {names}")
+              for p in plugins:
+                  src = p.get("source")
+                  if not isinstance(src, dict) or set(src) != SOURCE_KEYS or src.get("source") != "git-subdir":
+                      errors.append(f"{path}: {p.get('name')}: source must be git-subdir with exactly {sorted(SOURCE_KEYS)}")
+                  elif not re.fullmatch(r"v\d+\.\d+\.\d+", src["ref"]):
+                      errors.append(f"{path}: {p.get('name')}: ref {src['ref']!r} must be a vX.Y.Z tag")
+                  elif not src["url"].startswith("https://github.com/"):
+                      errors.append(f"{path}: {p.get('name')}: url must be an https GitHub URL")
+              if path == CLAUDE:
+                  for p in plugins:
+                      for key in ("description", "category", "keywords"):
+                          if not p.get(key):
+                              errors.append(f"{path}: {p.get('name')}: missing {key}")
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+
+          pairs = lambda data: [(p["name"], p["source"]) for p in data["plugins"]]
+          if pairs(claude) != pairs(codex):
+              errors.append(f"{CLAUDE} and {CODEX} must list the same plugins with the same source, in the same order")
+
+          checked = set()
+          for _, src in pairs(claude) + pairs(codex):
+              key = (src["url"], src["ref"])
+              if key in checked:
+                  continue
+              checked.add(key)
+              result = subprocess.run(
+                  ["git", "ls-remote", "--exit-code", "--tags", src["url"], f"refs/tags/{src['ref']}"],
+                  capture_output=True, text=True, env={"GIT_TERMINAL_PROMPT": "0", "PATH": "/usr/bin:/bin"},
+              )
+              if result.returncode != 0:
+                  errors.append(f"{src['url']}: tag {src['ref']} not found (exit {result.returncode})")
+              else:
+                  print(f"ok {src['url']} {src['ref']}")
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print(f"ok {len(claude['plugins'])} plugins")
+          PY
