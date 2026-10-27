@@ -14,11 +14,7 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
 | Plugin | Repository | Path | Ref |
 | --- | --- | --- | --- |
 | `aw` | `sentimony/agentic-workflow` | `plugins/aw` | `v0.0.8` |
-| `devflow` | `sentimony/skills` | `plugins/devflow` | `v1.58.14` |
-| `writing` | `sentimony/skills` | `plugins/writing` | `v1.58.14` |
-| `skill-crafting` | `sentimony/skills` | `plugins/skill-crafting` | `v1.58.14` |
-| `echarts` | `sentimony/skills` | `plugins/echarts` | `v1.58.14` |
-| `skills` | `sentimony/skills` | `plugins/skills` | `v1.58.14` |
+| `skills` | `sentimony/skills` | `plugins/skills` | `v1.58.15` |
 
 ## Rules
 
