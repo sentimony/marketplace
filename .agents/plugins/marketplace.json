@@ -19,68 +19,12 @@
       "category": "Developer Tools"
     },
     {
-      "name": "devflow",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/sentimony/skills.git",
-        "path": "plugins/devflow",
-        "ref": "v1.58.14"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "writing",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/sentimony/skills.git",
-        "path": "plugins/writing",
-        "ref": "v1.58.14"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "skill-crafting",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/sentimony/skills.git",
-        "path": "plugins/skill-crafting",
-        "ref": "v1.58.14"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "echarts",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/sentimony/skills.git",
-        "path": "plugins/echarts",
-        "ref": "v1.58.14"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
       "name": "skills",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/sentimony/skills.git",
         "path": "plugins/skills",
-        "ref": "v1.58.14"
+        "ref": "v1.58.15"
       },
       "policy": {
         "installation": "AVAILABLE",
