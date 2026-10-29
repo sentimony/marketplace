@@ -7,7 +7,7 @@ Code and Codex plugins.
 
 | Plugin | Source | Ref | What it holds |
 | --- | --- | --- | --- |
-| `aw` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.9` | Agentic workflow for one change from request to merge: specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings, cross-cr |
+| `aw` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.10` | Agentic workflow for one change from request to merge: specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings, cross-cr |
 | `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v1.58.16` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
 
 ## Install
