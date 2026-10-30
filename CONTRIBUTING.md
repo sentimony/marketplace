@@ -16,7 +16,7 @@ marketplace files and no plugin code; plugins live in their source repositories.
 
 1. Release the plugin in its source repository and wait for the tag.
 2. Set the `ref` of its entry to that tag in both `.claude-plugin/marketplace.json` and
-   `.agents/plugins/marketplace.json`, and in the table in `AGENTS.md`.
+   `.agents/plugins/marketplace.json`, and in the `README.md` plugin table.
 3. Install it from the branch in a throwaway config (commands in `AGENTS.md`).
 4. Merge the pull request after CI is green, then tag the squash commit.
 

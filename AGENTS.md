@@ -9,12 +9,8 @@
 
 ## Plugins
 
-Every entry is a `git-subdir` source pinned to a release tag of its source repository:
-
-| Plugin | Repository | Path | Ref |
-| --- | --- | --- | --- |
-| `aw` | `sentimony/agentic-workflow` | `plugins/aw` | `v0.0.11` |
-| `skills` | `sentimony/skills` | `plugins/skills` | `v1.58.16` |
+Every entry is a `git-subdir` source pinned to a release tag of its source repository;
+the current entries and refs are in the marketplace files and the `README.md` plugin table.
 
 ## Rules
 
@@ -23,13 +19,16 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
   object `{"source": "git-subdir", "url", "path", "ref"}`. Claude Code entries also carry
   `description`, `category`, and `keywords` from the source plugin; Codex entries carry
   `policy` and `category`.
-- After a release tag in a source repository, bump the `ref` of its entries in both files,
-  the table above, and the `README.md` plugin table with a patch release of this repository.
+- After a release tag in a source repository, bump the `ref` of its entries in both files and
+  the `README.md` plugin table with a patch release of this repository.
   A `ref` always names an existing tag, never a branch.
 - Before merging, install the changed plugins from the branch in a throwaway config:
   `CLAUDE_CONFIG_DIR=<tmp> claude plugin marketplace add <checkout>` and
   `claude plugin install <plugin>@sentimony`; `CODEX_HOME=<tmp> codex plugin marketplace add
   <checkout>` and `codex plugin add <plugin>@sentimony`.
+  Copy `~/.codex/auth.json` into the Codex `<tmp>`. A `ref` may name a pushed branch for this
+  check only. List Codex plugins with `codex plugin list -m sentimony`: the bare command also
+  prints the remote catalog (~1.6 MB).
 - Tags: annotated `v0.0.x`, patch bumps only, on the squash commit in `main`; the message lists
   every entry and its `ref`. A published tag is never moved or recreated.
 - Branches: `YYMMDDHHMM-dev-session`, squash-merged into `main` via PR; the branch is deleted
