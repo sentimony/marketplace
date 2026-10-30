@@ -13,7 +13,7 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
 
 | Plugin | Repository | Path | Ref |
 | --- | --- | --- | --- |
-| `aw` | `sentimony/agentic-workflow` | `plugins/aw` | `v0.0.10` |
+| `aw` | `sentimony/agentic-workflow` | `plugins/aw` | `v0.0.11` |
 | `skills` | `sentimony/skills` | `plugins/skills` | `v1.58.16` |
 
 ## Rules
@@ -23,9 +23,9 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
   object `{"source": "git-subdir", "url", "path", "ref"}`. Claude Code entries also carry
   `description`, `category`, and `keywords` from the source plugin; Codex entries carry
   `policy` and `category`.
-- After a release tag in a source repository, bump the `ref` of its entries in both files
-  (and the table above) with a patch release of this repository. A `ref` always names an
-  existing tag, never a branch.
+- After a release tag in a source repository, bump the `ref` of its entries in both files,
+  the table above, and the `README.md` plugin table with a patch release of this repository.
+  A `ref` always names an existing tag, never a branch.
 - Before merging, install the changed plugins from the branch in a throwaway config:
   `CLAUDE_CONFIG_DIR=<tmp> claude plugin marketplace add <checkout>` and
   `claude plugin install <plugin>@sentimony`; `CODEX_HOME=<tmp> codex plugin marketplace add
