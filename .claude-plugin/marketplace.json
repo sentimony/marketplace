@@ -12,7 +12,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": "plugins/aw",
-        "ref": "v0.0.10"
+        "ref": "v0.0.11"
       },
       "description": "Agentic workflow skills for one change from request to merge: specify the design, craft the plan, implement it, verify with evidence, request and resolve an independent code review, finalize the branch, and record session learnings.",
       "category": "development",

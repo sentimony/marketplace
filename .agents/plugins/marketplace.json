@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": "plugins/aw",
-        "ref": "v0.0.10"
+        "ref": "v0.0.11"
       },
       "policy": {
         "installation": "AVAILABLE",
