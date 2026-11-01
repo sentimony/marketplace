@@ -7,8 +7,16 @@ Code and Codex plugins.
 
 | Plugin | Source | Ref | What it holds |
 | --- | --- | --- | --- |
-| `aw` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.12` | Agentic workflow for one change from request to merge: specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings, cross-cr |
-| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v1.58.16` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
+| `aw` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.14` | Agentic workflow for one change from request to merge: specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings, cross-cr |
+| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v1.58.18` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
+
+Both entries use `git-subdir` with `path: "."`: the plugin manifests and `skills/`
+directory now live at the root of each source repository. The plugin names remain
+`aw` and `skills`.
+
+Native installation and discovery in Claude Code and Codex remain unverified for
+these root layouts. The owner accepted this release exception; the host validation
+matrix is tracked in [agentic-workflow issue 29](https://github.com/sentimony/agentic-workflow/issues/29).
 
 ## Install
 
