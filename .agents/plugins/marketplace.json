@@ -9,8 +9,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
-        "path": "plugins/aw",
-        "ref": "v0.0.12"
+        "path": ".",
+        "ref": "v0.0.14"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -23,8 +23,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/sentimony/skills.git",
-        "path": "plugins/skills",
-        "ref": "v1.58.16"
+        "path": ".",
+        "ref": "v1.58.18"
       },
       "policy": {
         "installation": "AVAILABLE",
