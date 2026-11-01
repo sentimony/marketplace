@@ -4,15 +4,15 @@
     "name": "Ihor Orlovskyi",
     "url": "https://github.com/sentimony"
   },
-  "description": "Sentimony agent skills as installable Claude Code and Codex plugins: aw from sentimony/agentic-workflow and skills from sentimony/skills.",
+  "description": "Sentimony agent skills as installable Claude Code and Codex plugins: agentflow from sentimony/agentic-workflow and skills from sentimony/skills.",
   "plugins": [
     {
-      "name": "aw",
+      "name": "agentflow",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": ".",
-        "ref": "v0.0.14"
+        "ref": "v0.0.15"
       },
       "description": "Agentic workflow skills for one change from request to merge: specify the design, craft the plan, implement it, verify with evidence, request and resolve an independent code review, finalize the branch, and record session learnings.",
       "category": "development",

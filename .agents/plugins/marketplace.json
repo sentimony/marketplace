@@ -5,12 +5,12 @@
   },
   "plugins": [
     {
-      "name": "aw",
+      "name": "agentflow",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": ".",
-        "ref": "v0.0.14"
+        "ref": "v0.0.15"
       },
       "policy": {
         "installation": "AVAILABLE",
