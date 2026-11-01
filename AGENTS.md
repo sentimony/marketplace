@@ -36,3 +36,7 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
   after merge. `main` accepts no direct pushes.
 - License: MIT, Ihor Orlovskyi.
 - English only, plain hyphen.
+
+## ADR
+
+1. Before an architectural change, read relevant current decisions (`docs/adr`), the [ADR policy](docs/adr-adoption/policy.md), and [template](docs/adr-adoption/templates/adr.md); show conflicts to the owner and record important approved choices under that policy.
