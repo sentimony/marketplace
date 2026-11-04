@@ -8,7 +8,7 @@ Code and Codex plugins.
 | Plugin | Source | Ref | What it holds |
 | --- | --- | --- | --- |
 | `agentflow` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.18` | Nine workflow skills: resolve-issue, specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings |
-| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v1.58.18` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
+| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v0.0.97` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
 | `cross-agent` | [sentimony/cross-agent](https://github.com/sentimony/cross-agent) | `v0.0.1` | Experimental standalone delegation and consultation with persistent task and provider session identities |
 
 All entries use `git-subdir` with `path: "."`: the plugin manifests and `skills/`

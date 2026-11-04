@@ -14,7 +14,7 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
 | Plugin | Repository | Path | Ref |
 | --- | --- | --- | --- |
 | `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.18` |
-| `skills` | `sentimony/skills` | `.` | `v1.58.18` |
+| `skills` | `sentimony/skills` | `.` | `v0.0.97` |
 | `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.1` |
 
 ## Rules
