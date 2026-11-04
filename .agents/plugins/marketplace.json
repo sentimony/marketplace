@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/agentic-workflow.git",
         "path": ".",
-        "ref": "v0.0.18"
+        "ref": "v0.0.19"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -24,7 +24,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/skills.git",
         "path": ".",
-        "ref": "v0.0.97"
+        "ref": "v0.0.98"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -38,7 +38,7 @@
         "source": "git-subdir",
         "url": "https://github.com/sentimony/cross-agent.git",
         "path": ".",
-        "ref": "v0.0.1"
+        "ref": "v0.0.2"
       },
       "policy": {
         "installation": "AVAILABLE",
