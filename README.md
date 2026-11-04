@@ -13,8 +13,8 @@ Version: `v0.0.10`
 | `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v0.0.98` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
 | `cross-agent` | [sentimony/cross-agent](https://github.com/sentimony/cross-agent) | `v0.0.2` | Experimental standalone delegation and consultation with persistent task and provider session identities |
 
-All entries use `git-subdir` with `path: "."`: the plugin manifests and `skills/`
-directory now live at the root of each source repository. The plugin names are
+Claude Code entries use `git-subdir` with `path: "."` and Codex entries use `url`: the
+plugin manifests and `skills/` directory live at the root of each source repository. The plugin names are
 `agentflow`, `skills`, and `cross-agent`.
 
 Native installation and discovery in Claude Code and Codex remain unverified for

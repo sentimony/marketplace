@@ -24,7 +24,8 @@ jobs:
 
           CLAUDE = pathlib.Path(".claude-plugin/marketplace.json")
           CODEX = pathlib.Path(".agents/plugins/marketplace.json")
-          SOURCE_KEYS = {"source", "url", "path", "ref"}
+          SOURCE_KEYS = {CLAUDE: ("git-subdir", {"source", "url", "path", "ref"}),
+                         CODEX: ("url", {"source", "url", "ref"})}
           errors = []
 
           def load(path):
@@ -51,8 +52,9 @@ jobs:
                   errors.append(f"{path}: duplicate plugin names {names}")
               for p in plugins:
                   src = p.get("source")
-                  if not isinstance(src, dict) or set(src) != SOURCE_KEYS or src.get("source") != "git-subdir":
-                      errors.append(f"{path}: {p.get('name')}: source must be git-subdir with exactly {sorted(SOURCE_KEYS)}")
+                  kind, keys = SOURCE_KEYS[path]
+                  if not isinstance(src, dict) or set(src) != keys or src.get("source") != kind:
+                      errors.append(f"{path}: {p.get('name')}: source must be {kind} with exactly {sorted(keys)}")
                   elif not re.fullmatch(r"v\d+\.\d+\.\d+", src["ref"]):
                       errors.append(f"{path}: {p.get('name')}: ref {src['ref']!r} must be a vX.Y.Z tag")
                   elif not src["url"].startswith("https://github.com/"):
@@ -68,8 +70,9 @@ jobs:
               sys.exit(1)
 
           pairs = lambda data: [(p["name"], p["source"]) for p in data["plugins"]]
-          if pairs(claude) != pairs(codex):
-              errors.append(f"{CLAUDE} and {CODEX} must list the same plugins with the same source, in the same order")
+          ident = lambda data: [(n, s["url"], s["ref"]) for n, s in pairs(data)]
+          if ident(claude) != ident(codex):
+              errors.append(f"{CLAUDE} and {CODEX} must list the same plugins with the same url and ref, in the same order")
 
           checked = set()
           for _, src in pairs(claude) + pairs(codex):
