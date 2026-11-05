@@ -3,15 +3,15 @@
 Public plugin marketplace of sentimony: one place to install Sentimony agent skills as Claude
 Code and Codex plugins.
 
-Version: `v0.0.11`
+Version: `v0.0.12`
 
 ## Plugins
 
 | Plugin | Source | Ref | What it holds |
 | --- | --- | --- | --- |
-| `agentflow` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.20` | Nine workflow skills: resolve-issue, specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings |
-| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v0.0.99` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
-| `cross-agent` | [sentimony/cross-agent](https://github.com/sentimony/cross-agent) | `v0.0.3` | Experimental standalone delegation and consultation with persistent task and provider session identities |
+| `agentflow` | [sentimony/agentic-workflow](https://github.com/sentimony/agentic-workflow) | `v0.0.21` | Nine workflow skills: resolve-issue, specify, plan-craft, implement, verify, cr-request, cr-received, finalize, session-learnings |
+| `skills` | [sentimony/skills](https://github.com/sentimony/skills) | `v0.0.100` | All 28 skills of sentimony/skills: scope triage, planning, plan execution, TDD, debugging, code review, verification, branch finishing, prose editing, plain hyphens, no negative parallelism, skill crafting, Apache ECharts, frontend, Vitest, TypeScript, agent context, secret hygiene, browser debugging, GitHub accounts, commits |
+| `cross-agent` | [sentimony/cross-agent](https://github.com/sentimony/cross-agent) | `v0.0.4` | Experimental standalone delegation and consultation with persistent task and provider session identities |
 
 Claude Code entries use `git-subdir` with `path: "."` and Codex entries use `url`: the
 plugin manifests and `skills/` directory live at the root of each source repository. The plugin names are
