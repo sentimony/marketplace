@@ -5,7 +5,8 @@
 - `.claude-plugin/marketplace.json` - Claude Code marketplace `sentimony`.
 - `.agents/plugins/marketplace.json` - Codex marketplace `sentimony`.
 - `.github/workflows/ci.yml` - validation: both files parse, list the same plugins with the
-  same `source`, and every `ref` exists as a tag in its source repository.
+  same `source`, every `ref` exists as a tag in its source repository, and each Claude Code
+  `version` equals its `ref` without `v`.
 
 ## Plugins
 
@@ -13,9 +14,9 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
 
 | Plugin | Repository | Path | Ref |
 | --- | --- | --- | --- |
-| `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.21` |
-| `skills` | `sentimony/skills` | `.` | `v0.0.100` |
-| `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.4` |
+| `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.22` |
+| `skills` | `sentimony/skills` | `.` | `v0.0.101` |
+| `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.5` |
 
 ## Rules
 
@@ -24,10 +25,12 @@ Every entry is a `git-subdir` source pinned to a release tag of its source repos
   `ref`. Claude Code uses `{"source": "git-subdir", "url", "path": ".", "ref"}`; Codex does not
   list `git-subdir` entries with `path: "."` (Codex 0.166.0), so its entries use
   `{"source": "url", "url", "ref"}`: the plugins live at the repository root. Claude Code entries also carry
-  `description`, `category`, and `keywords` from the source plugin; Codex entries carry
+  `description`, `category`, and `keywords` from the source plugin, and `version`, equal to `ref`
+  without `v` (bump it together with `ref`); Codex entries carry
   `policy` and `category`.
 - After a release tag in a source repository, bump the `ref` of its entries in both files,
-  the table above, and the `README.md` plugin table with a patch release of this repository.
+  the Claude Code `version`, the table above, the `README.md` plugin table, and the tags in the
+  README Antigravity `agy plugin install` commands with a patch release of this repository.
   A `ref` always names an existing tag, never a branch.
 - Before merging, install the changed plugins from the branch in a throwaway config:
   `CLAUDE_CONFIG_DIR=<tmp> claude plugin marketplace add <checkout>` and
