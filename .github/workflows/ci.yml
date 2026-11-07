@@ -64,6 +64,11 @@ jobs:
                       for key in ("description", "category", "keywords"):
                           if not p.get(key):
                               errors.append(f"{path}: {p.get('name')}: missing {key}")
+                  for p in plugins:
+                      src = p.get("source") or {}
+                      expected = str(src.get("ref", "")).removeprefix("v")
+                      if p.get("version") != expected:
+                          errors.append(f"{path}: {p.get('name')}: version must equal ref without v ({expected})")
 
           if errors:
               print("\n".join(errors))
