@@ -24,7 +24,7 @@ jobs:
 
           CLAUDE = pathlib.Path(".claude-plugin/marketplace.json")
           CODEX = pathlib.Path(".agents/plugins/marketplace.json")
-          SOURCE_KEYS = {CLAUDE: ("git-subdir", {"source", "url", "path", "ref"}),
+          SOURCE_KEYS = {CLAUDE: ("url", {"source", "url", "ref"}),
                          CODEX: ("url", {"source", "url", "ref"})}
           errors = []
 
