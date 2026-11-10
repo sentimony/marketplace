@@ -20,14 +20,16 @@ plugin manifests and `skills/` directory live at the root of each source reposit
 A `git-subdir` source with `path: "."` is not used: Claude Code 2.1.322 installs only the
 top-level files of the repository from it (no `skills/`).
 
-Native installation and discovery in Claude Code and Codex remain unverified for
-these root layouts. The owner accepted this release exception; the host validation
-matrix is tracked in [agentic-workflow issue 29](https://github.com/sentimony/agentic-workflow/issues/29).
+Installation from these pins was checked on 2026-11-10 in throwaway configs: Claude Code
+2.1.322 and Codex 0.167.0 install all three plugins with their skills (cross-agent 2,
+skills 28, agentflow 9). Skill invocation inside the hosts and Antigravity remain
+unverified; the host validation matrix is tracked in
+[agentic-workflow issue 29](https://github.com/sentimony/agentic-workflow/issues/29).
 
 `cross-agent` is a separate experimental plugin. Install it alongside `agentflow`
 when using delegation with the workflow owner adapter. Basic delegation has no
-workflow dependency. Native installation, invocation and provider resume
-remain unverified; the remaining evidence is tracked in
+workflow dependency. Installation was checked as above; invocation and provider
+resume remain unverified, and the remaining evidence is tracked in
 [agentic-workflow issue 31](https://github.com/sentimony/agentic-workflow/issues/31).
 
 ## Install
