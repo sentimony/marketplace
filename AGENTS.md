@@ -7,6 +7,9 @@
 - `.github/workflows/ci.yml` - validation: both files parse, list the same plugins with the
   same `source`, every `ref` exists as a tag in its source repository, and each Claude Code
   `version` equals its `ref` without `v`.
+- `.github/workflows/auto-reviewer.yaml` - Auto Reviewer caller of
+  `sentimony/github-workflows` `auto-reviewer-shared.yaml@v0.0.5`; it waits for the `validate` job
+  of `CI` and reviews the PR as yngwald.
 
 ## Plugins
 
