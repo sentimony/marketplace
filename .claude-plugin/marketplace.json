@@ -33,9 +33,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/skills.git",
-        "ref": "v0.0.109"
+        "ref": "v0.0.111"
       },
-      "version": "0.0.109",
+      "version": "0.0.111",
       "description": "Sentimony agent skills: scope triage, planning, plan execution, test-driven development, debugging, code review, verification, and branch finishing; prose editing, dashes, and negative parallelism; skill crafting; Apache ECharts; frontend design, Vitest, TypeScript, agent context maintenance, secret hygiene, browser debugging, GitHub account switching, and committing the working tree.",
       "category": "development",
       "keywords": [
