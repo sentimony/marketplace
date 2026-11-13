@@ -9,9 +9,9 @@ Version: `v0.0.16`
 
 | Plugin | Version | Skills |
 | --- | --- | --- |
-| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.8 | `cross-agent`, `transfer-context` |
-| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.25 | `resolve-issue`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize`, `session-learnings` |
-| [skills](https://github.com/sentimony/skills) | 0.0.104 | `scope-triage`, `doc-preview`, `plan-crafting`, `plan-execution`, `plan-orchestration`, `worktree-isolation`, `parallel-agents`, `tdd`, `review-request`, `cross-review`, `review-resolution`, `debugging`, `web-debug`, `webapp-debugger`, `verification-gate`, `branch-finish`, `typescript`, `frontend-crafting`, `vitest`, `echarts`, `prose-crafting`, `dashfix`, `negafix`, `agent-instructions`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting` |
+| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.9 | `cross-agent`, `transfer-context` |
+| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.26 | `resolve-issue`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize`, `session-learnings` |
+| [skills](https://github.com/sentimony/skills) | 0.0.108 | `scope-triage`, `doc-preview`, `plan-crafting`, `plan-execution`, `plan-orchestration`, `worktree-isolation`, `parallel-agents`, `tdd`, `review-request`, `cross-review`, `review-resolution`, `debugging`, `web-debug`, `webapp-debugger`, `verification-gate`, `branch-finish`, `typescript`, `frontend-crafting`, `vitest`, `echarts`, `prose-crafting`, `dashfix`, `negafix`, `agent-instructions`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting` |
 
 Both Claude Code and Codex entries use a `url` source with a release tag `ref`: the
 plugin manifests and `skills/` directory live at the root of each source repository. The plugin names are
@@ -55,9 +55,9 @@ codex plugin add cross-agent@sentimony
 Antigravity (`agy` installs from the repository URL; the `/tree/<tag>` form pins the release tag):
 
 ```sh
-agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.25
-agy plugin install https://github.com/sentimony/skills/tree/v0.0.104
-agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.8
+agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.26
+agy plugin install https://github.com/sentimony/skills/tree/v0.0.108
+agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.9
 ```
 
 Since `v0.0.8`, `agentflow` replaces `aw`. The catalog contains one workflow entry,
