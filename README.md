@@ -3,14 +3,14 @@
 Public plugin marketplace of sentimony: one place to install Sentimony agent skills as Claude
 Code and Codex plugins.
 
-Version: `v0.0.18`
+Version: `v0.0.19`
 
 ## Plugins
 
 | Plugin | Version | Skills |
 | --- | --- | --- |
-| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.9 | `cross-agent`, `transfer-context` |
-| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.28 | `resolve-issue`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize`, `session-learnings` |
+| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.10 | `cross-agent`, `transfer-context` |
+| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.29 | `resolve-issue`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize`, `session-learnings` |
 | [skills](https://github.com/sentimony/skills) | 0.0.109 | `scope-triage`, `doc-preview`, `plan-crafting`, `plan-execution`, `plan-orchestration`, `worktree-isolation`, `parallel-agents`, `tdd`, `review-request`, `cross-review`, `review-resolution`, `debugging`, `web-debug`, `webapp-debugger`, `verification-gate`, `branch-finish`, `typescript`, `frontend-crafting`, `vitest`, `echarts`, `prose-crafting`, `dashfix`, `negafix`, `agent-instructions`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting` |
 
 Both Claude Code and Codex entries use a `url` source with a release tag `ref`: the
@@ -55,9 +55,9 @@ codex plugin add cross-agent@sentimony
 Antigravity (`agy` installs from the repository URL; the `/tree/<tag>` form pins the release tag):
 
 ```sh
-agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.28
+agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.29
 agy plugin install https://github.com/sentimony/skills/tree/v0.0.109
-agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.9
+agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.10
 ```
 
 Since `v0.0.8`, `agentflow` replaces `aw`. The catalog contains one workflow entry,
