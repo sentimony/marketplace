@@ -11,9 +11,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/agentic-workflow.git",
-        "ref": "v0.0.25"
+        "ref": "v0.0.27"
       },
-      "version": "0.0.25",
+      "version": "0.0.27",
       "description": "Agentic workflow skills for one change from request to merge: specify the design, craft the plan, implement it, verify with evidence, request and resolve an independent code review, finalize the branch, and record session learnings.",
       "category": "development",
       "keywords": [
@@ -33,9 +33,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/skills.git",
-        "ref": "v0.0.104"
+        "ref": "v0.0.108"
       },
-      "version": "0.0.104",
+      "version": "0.0.108",
       "description": "Sentimony agent skills: scope triage, planning, plan execution, test-driven development, debugging, code review, verification, and branch finishing; prose editing, dashes, and negative parallelism; skill crafting; Apache ECharts; frontend design, Vitest, TypeScript, agent context maintenance, secret hygiene, browser debugging, GitHub account switching, and committing the working tree.",
       "category": "development",
       "keywords": [
@@ -68,9 +68,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/cross-agent.git",
-        "ref": "v0.0.8"
+        "ref": "v0.0.9"
       },
-      "version": "0.0.8",
+      "version": "0.0.9",
       "description": "Delegate consultations and installed skills to explicitly configured agent CLIs with persistent task and provider session identities.",
       "category": "development",
       "keywords": [
