@@ -17,8 +17,8 @@ Every entry is a `url` source pinned to a release tag of its source repository:
 
 | Plugin | Repository | Path | Ref |
 | --- | --- | --- | --- |
-| `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.27` |
-| `skills` | `sentimony/skills` | `.` | `v0.0.108` |
+| `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.28` |
+| `skills` | `sentimony/skills` | `.` | `v0.0.109` |
 | `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.9` |
 
 ## Rules
