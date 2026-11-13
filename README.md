@@ -3,7 +3,7 @@
 Public plugin marketplace of sentimony: one place to install Sentimony agent skills as Claude
 Code and Codex plugins.
 
-Version: `v0.0.16`
+Version: `v0.0.17`
 
 ## Plugins
 
