@@ -68,9 +68,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/cross-agent.git",
-        "ref": "v0.0.10"
+        "ref": "v0.0.11"
       },
-      "version": "0.0.10",
+      "version": "0.0.11",
       "description": "Delegate consultations and installed skills to explicitly configured agent CLIs with persistent task and provider session identities.",
       "category": "development",
       "keywords": [
