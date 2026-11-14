@@ -19,7 +19,7 @@ Every entry is a `url` source pinned to a release tag of its source repository:
 | --- | --- | --- | --- |
 | `agentflow` | `sentimony/agentic-workflow` | `.` | `v0.0.30` |
 | `skills` | `sentimony/skills` | `.` | `v0.0.111` |
-| `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.10` |
+| `cross-agent` | `sentimony/cross-agent` | `.` | `v0.0.11` |
 
 ## Rules
 
