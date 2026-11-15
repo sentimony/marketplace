@@ -22,7 +22,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sentimony/skills.git",
-        "ref": "v0.0.112"
+        "ref": "v0.0.113"
       },
       "policy": {
         "installation": "AVAILABLE",
