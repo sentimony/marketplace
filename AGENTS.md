@@ -8,7 +8,7 @@
   same `source`, every `ref` exists as a tag in its source repository, and each Claude Code
   `version` equals its `ref` without `v`.
 - `.github/workflows/auto-reviewer.yaml` - Auto Reviewer caller of
-  `sentimony/github-workflows` `auto-reviewer-shared.yaml@v0.0.5`; it waits for the `validate` job
+  `sentimony/github-workflows` `auto-reviewer-shared.yaml@ab928503b0e21a3e98f7ba34ee9eeb22066cfca8`; it waits for the `validate` job
   of `CI` and reviews the PR as yngwald.
 
 ## Plugins
