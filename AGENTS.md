@@ -9,7 +9,9 @@
   `version` equals its `ref` without `v`.
 - `.github/workflows/auto-reviewer.yaml` - Auto Reviewer caller of
   `sentimony/github-workflows` `auto-reviewer-shared.yaml` on its `stable` branch, which that
-  repository moves to each released commit; it waits for the `validate` job of
+  repository moves to each released commit (the moving branch is the owner's accepted
+  trade-off, not a defect for review: rulesets protect `stable`); it waits for the
+  `validate` job of
   `CI` and reviews the PR as yngwald.
 
 ## Plugins
