@@ -3,15 +3,15 @@
 Public plugin marketplace of sentimony: one place to install Sentimony agent skills as Claude
 Code and Codex plugins.
 
-Version: `v0.0.22`
+Version: `v0.0.23`
 
 ## Plugins
 
 | Plugin | Version | Skills |
 | --- | --- | --- |
-| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.11 | `cross-agent`, `transfer-context` |
-| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.30 | `resolve-issue`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize`, `session-learnings` |
-| [skills](https://github.com/sentimony/skills) | 0.0.111 | `scope-triage`, `doc-preview`, `plan-crafting`, `plan-execution`, `plan-orchestration`, `worktree-isolation`, `parallel-agents`, `tdd`, `review-request`, `cross-review`, `review-resolution`, `debugging`, `web-debug`, `webapp-debugger`, `verification-gate`, `branch-finish`, `typescript`, `frontend-crafting`, `vitest`, `echarts`, `prose-crafting`, `dashfix`, `negafix`, `agent-instructions`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting` |
+| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.12 | `cross-agent` |
+| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.31 | `resolve-issue`, `resolve-pr`, `resolve-ci`, `resume-task`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize` |
+| [skills](https://github.com/sentimony/skills) | 0.0.112 | `scope-triage`, `doc-preview`, `plan-crafting`, `plan-execution`, `plan-orchestration`, `worktree-isolation`, `parallel-agents`, `tdd`, `review-request`, `cross-review`, `review-resolution`, `debugging`, `web-debug`, `webapp-debugger`, `verification-gate`, `branch-finish`, `typescript`, `frontend-crafting`, `vitest`, `echarts`, `prose-crafting`, `dashfix`, `negafix`, `agent-instructions`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting`, `session-learnings`, `transfer-context` |
 
 Both Claude Code and Codex entries use a `url` source with a release tag `ref`: the
 plugin manifests and `skills/` directory live at the root of each source repository. The plugin names are
@@ -20,9 +20,9 @@ plugin manifests and `skills/` directory live at the root of each source reposit
 A `git-subdir` source with `path: "."` is not used: Claude Code 2.1.322 installs only the
 top-level files of the repository from it (no `skills/`).
 
-Installation from these pins was checked on 2026-11-10 in throwaway configs: Claude Code
-2.1.322 and Codex 0.167.0 install all three plugins with their skills (cross-agent 2,
-skills 28, agentflow 9). Skill invocation inside the hosts and Antigravity remain
+Installation from these pins was checked on 2026-11-15 in throwaway configs: Claude Code
+2.1.325 and Codex 0.169.0 install all three plugins with their skills (cross-agent 1,
+skills 30, agentflow 11). Skill invocation inside the hosts and Antigravity remain
 unverified; the host validation matrix is tracked in
 [agentic-workflow issue 29](https://github.com/sentimony/agentic-workflow/issues/29).
 
@@ -55,10 +55,14 @@ codex plugin add cross-agent@sentimony
 Antigravity (`agy` installs from the repository URL; the `/tree/<tag>` form pins the release tag):
 
 ```sh
-agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.30
-agy plugin install https://github.com/sentimony/skills/tree/v0.0.111
-agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.11
+agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.31
+agy plugin install https://github.com/sentimony/skills/tree/v0.0.112
+agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.12
 ```
+
+Since `v0.0.23`, `session-learnings` (formerly in `agentflow`) and `transfer-context`
+(formerly in `cross-agent`) ship in the `skills` plugin: update all three plugins together so
+that neither skill disappears or is installed twice.
 
 Since `v0.0.8`, `agentflow` replaces `aw`. The catalog contains one workflow entry,
 `agentflow`. Update your marketplace catalog, then migrate an existing `aw` installation:
