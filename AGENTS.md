@@ -41,7 +41,8 @@ Every entry is a `url` source pinned to a release tag of its source repository:
 - Before merging, install the changed plugins from the branch in a throwaway config:
   `CLAUDE_CONFIG_DIR=<tmp> claude plugin marketplace add <checkout>` and
   `claude plugin install <plugin>@sentimony`; `CODEX_HOME=<tmp> codex plugin marketplace add
-  <checkout>` and `codex plugin add <plugin>@sentimony`.
+  <checkout>` and `codex plugin add <plugin>@sentimony`. Create `<tmp>` first (`mktemp -d`):
+  Codex refuses a missing `CODEX_HOME` ("that path does not exist").
 - Tags: annotated `v0.0.x`, patch bumps only, on the squash commit in `main`; the message lists
   every entry and its `ref`. A published tag is never moved or recreated.
 - Branches: `YYMMDDHHMM-dev-session`, squash-merged into `main` via PR; the branch is deleted
