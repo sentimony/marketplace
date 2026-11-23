@@ -3,15 +3,15 @@
 Public plugin marketplace of sentimony: one place to install Sentimony agent skills as Claude
 Code and Codex plugins.
 
-Version: `v0.0.25`
+Version: `v0.0.26`
 
 ## Plugins
 
 | Plugin | Version | Skills |
 | --- | --- | --- |
-| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.13 | `cross-agent` |
-| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.33 | `resolve-issue`, `resolve-pr`, `resolve-ci`, `resume-task`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize` |
-| [skills](https://github.com/sentimony/skills) | 0.0.114 | `scope-triage`, `md-preview`, `plan-craft`, `implement`, `subagents-implement`, `worktree-isolation`, `parallel-agents`, `tdd`, `request-review`, `cross-review`, `received-review`, `debug`, `playwright-debug`, `agent-browser-debug`, `verify-gate`, `finalize`, `typescript`, `frontend-craft`, `vitest`, `echarts`, `prose-craft`, `dashfix`, `negafix`, `maintain-agents-md`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting`, `session-learnings`, `transfer-context` |
+| [cross-agent](https://github.com/sentimony/cross-agent) | 0.0.14 | `cross-agent` |
+| [agentic-workflow](https://github.com/sentimony/agentic-workflow) | 0.0.34 | `resolve-issue`, `resolve-pr`, `resolve-ci`, `resume-task`, `specify`, `plan-craft`, `implement`, `verify`, `cr-request`, `cr-received`, `finalize` |
+| [skills](https://github.com/sentimony/skills) | 0.0.116 | `scope-triage`, `doc-preview`, `plan-craft`, `implement`, `subagents-implement`, `worktree-isolation`, `parallel-agents`, `tdd`, `request-review`, `cross-review`, `received-review`, `debug`, `playwright-debug`, `agent-browser-debug`, `verify-gate`, `finalize`, `typescript`, `frontend-craft`, `vitest`, `echarts`, `prose-craft`, `dashfix`, `negafix`, `maintain-agents-md`, `commit-all`, `gh-switch`, `secret-hygiene`, `skill-crafting`, `session-learnings`, `transfer-context` |
 
 Both Claude Code and Codex entries use a `url` source with a release tag `ref`: the
 plugin manifests and `skills/` directory live at the root of each source repository. The plugin names are
@@ -55,9 +55,9 @@ codex plugin add cross-agent@sentimony
 Antigravity (`agy` installs from the repository URL; the `/tree/<tag>` form pins the release tag):
 
 ```sh
-agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.33
-agy plugin install https://github.com/sentimony/skills/tree/v0.0.114
-agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.13
+agy plugin install https://github.com/sentimony/agentic-workflow/tree/v0.0.34
+agy plugin install https://github.com/sentimony/skills/tree/v0.0.116
+agy plugin install https://github.com/sentimony/cross-agent/tree/v0.0.14
 ```
 
 Since `v0.0.23`, `session-learnings` (formerly in `agentflow`) and `transfer-context`
